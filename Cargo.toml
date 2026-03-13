@@ -1,0 +1,16 @@
+[package]
+name = "httpcliparser"
+version = "0.1.0"
+edition = "2021"
+description = "Parse HTTP CLI input syntax into headers, query params, and JSON bodies"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/jclem/httpcliparser"
+homepage = "https://github.com/jclem/httpcliparser"
+documentation = "https://docs.rs/httpcliparser"
+keywords = ["http", "cli", "parser", "json"]
+categories = ["parser-implementations", "command-line-interface"]
+
+[dependencies]
+serde_json = "1.0"
+winnow = "0.7"
