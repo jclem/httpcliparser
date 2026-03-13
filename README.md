@@ -288,12 +288,12 @@ The parser reports three kinds of failures:
 
 This repo includes a GitHub Actions publish workflow.
 
-To enable it:
+To publish a release:
 
-1. Create a crates.io API token.
-2. Add it to the repository secrets as `CARGO_REGISTRY_TOKEN`.
-3. Bump `version` in `Cargo.toml`.
-4. Push a matching tag like `v0.1.0`.
+1. Configure trusted publishing for this repository on crates.io.
+2. Bump `version` in `Cargo.toml`.
+3. Push a matching tag like `v0.1.0`.
 
 The publish workflow reruns formatting, linting, tests, verifies the tag matches
-the crate version, packages the crate, and then publishes it to crates.io.
+the crate version, packages the crate, exchanges the GitHub Actions OIDC token
+for a short-lived crates.io token, and then publishes the crate.
